@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <header id="header">
+        <button id="headBtn">Add User</button>
+    </header>
     <main>
         <div class="table_part">
             <h1>Bank User's List</h1>
@@ -27,10 +30,20 @@
                 </table>
             </div>
         </div>
-    </main>
-
-        
-
+        <br>
+        <div class="user_part" id="userForm">
+            <form id="addUserForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+              <label for="surname">Surname:</label>
+              <input type="text" id="surname" name="surname">
+              <label for="number">Phone_Number:</label>
+              <input type="number" id="number" name="number">
+              <label for="debt">Debt:</label>
+              <input type="number" id="inp_debt" name="debt">
+              <button type="submit" id="submit">Submit</button>
+            </form>
+          </div>
 
 
         <script src="./jes.js"></script>
