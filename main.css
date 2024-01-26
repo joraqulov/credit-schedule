@@ -1,0 +1,98 @@
+*{
+ font-family: sans-serif;   
+}
+table, tr, td {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.teybl {
+    display: grid;
+    justify-content: center;
+}
+td {
+    padding: 5px 30px;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+} 
+#plus{
+width: 30px;
+}
+#minus{
+    width: 30px;
+    }
+.table_part {
+    margin-top: 120px;
+}
+header {
+    display: flex;
+    justify-content: end;
+}
+#headBtn {
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.user_part {
+    background-color: inherit;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.312);
+    text-align: center;
+    transform-origin: top center;
+    transform: scaleY(0);
+    transition: transform 0.3s ease-in-out;
+    width: 20%;
+    margin-top: -50px
+    
+  }
+  
+  .user_part.show {
+    transform: scaleY(1);
+  }
+  
+  .user_part form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user_part input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 70%;
+    box-sizing: border-box;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .user_part input:focus {
+    border-color: #333;
+  }
+  
+  .user_part button {
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  label {
+    color: white;
+  }
+  .user_part{
+    margin-left: 30px;
+  }
+  
