@@ -4,10 +4,6 @@
   box-sizing: border-box;
  font-family: sans-serif;   
 }
-body{
-  /* background: url("./img/desktop-wallpaper-political-map-of-the-world-world-map.jpg") no-repeat;
-  background-size: cover; */
-}
 table, tr, td {
     text-align: center;
     border: 1px solid black;
