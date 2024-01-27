@@ -27,12 +27,113 @@ width: 30px;
 .table_part {
     margin-top: 120px;
 }
+header input {
+  height: 45px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+border-radius: 5px;
+  border: none;
+background-color: #eeeeee;
+}
 header {
-    display: flex;
+  margin-top: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: end;
+    padding: 10px;
+    
+}
+h3{
+  margin-left: 55px;
+  font-size: 24px;
+}
+.pay{
+  display: grid;
+  grid-template-columns: auto auto auto auto ;
+  gap: 20px;
+  justify-content: space-around;
+  
+}
+.pay .amount{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content:space-around;
+  align-items: center;
+  background-color: #e7b7ba;
+  border-radius: 10px;
+width: 300px;
+height: 160px;
+}
+.amount_p p{
+  font-size: 14px;
+  font-weight: 600;
+}
+.amount_p span{
+  font-size: 22px;
+  font-weight: 700;
+}
+.dolir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
+.dolir p{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+
+.pay .order{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+width: 300px;
+height: 160px;
+background-color: #d5a9d8;
+}
+#order-bar{
+  background-color:#80007d;
+}
+#user-ber{
+  background-color: #4caf50;
+}
+#chek-bar{
+  background-color: blue;
+}
+.pay .costumer{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+width: 300px;
+height: 160px;
+background-color: #a2d7a5;
+}
+.pay .proseed{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+  align-items: center;
+  border-radius: 10px;
+width: 300px;
+height: 160px;
+background-color:#8e8bbb;
+
 }
 #headBtn {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     background-color: #4caf50;
     color: white;
     padding: 10px 15px;
