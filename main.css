@@ -4,7 +4,6 @@
   box-sizing: border-box;
  font-family: sans-serif;   
 }
-
 table, tr, td {
     text-align: center;
     border: 1px solid black;
