@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- font-family: sans-serif;   
+ font-family: sans-serif;  
+ text-decoration: none; 
 }
 table, tr, td {
     text-align: center;
@@ -42,20 +43,59 @@ background-color: #eeeeee;
 header {
   margin-top: 15px;
     display: grid;
-    grid-template-columns: auto auto auto auto ;
-    justify-content: end;
+    align-items: center;
+    grid-template-columns: auto auto ;
+    justify-content: space-between;
     padding: 10px;   
     gap: 13px;
+    margin-bottom: 25px;
 }
-header img{
+.hederend{
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  gap: 10px;
+}
+header .githubimg{
   width: 50px;
+  box-shadow: 5px 5px 5px #888888;
   border-radius: 100%;
+}
+header .icon{
+  margin-left: 50px;
+}
+header .icon img{
+  width: 120px;
+  cursor: pointer;
+  height: 50px;
+  box-shadow: 5px 5px 5px #888888;
+ transition: 0.5s;
+}
+header .icon img:hover{
+  transform: scale(1.2);
 }
 h3{
   margin-bottom: 15px;
   margin-left: 55px;
   font-size: 24px;
 }
+h2 {
+  cursor: pointer;
+  text-align: center;
+  margin: 50px;
+  font-size: 40px;
+  color: #009ea7;
+  font-weight: 800;
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+h2:hover {
+  /* font-size: 45px; */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
 .pay{
   display: grid;
   grid-template-columns: auto auto auto auto ;
@@ -279,4 +319,52 @@ background-color: #333;
 .map img{
   box-shadow: 5px 5px 5px #888888;
   border-radius: 10px;
+}
+/* footer */
+
+footer{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  margin: 50px;
+  /* background-color: #009ea7; */
+}
+footer div{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+footer div i{
+  cursor: pointer;
+  font-size: 36px;
+  color: #4caf50;
+  margin-right: 30px;
+}
+footer div p{
+  cursor: pointer;
+  font-size: 25px;
+}
+footer div a{
+  color: #4caf50;
+  font-size: 25px;
+  font-weight: 600;
+}
+footer div .phonnumber{
+  margin-left: 258px;
+  margin-right: 236px;
+}
+footer div.gmail{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+footer div .footerimg img{
+  width: 50px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+footer div .footerimg{
+  margin-left: 250px;
 }
