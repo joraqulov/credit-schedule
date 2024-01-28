@@ -2,6 +2,10 @@ function showinp() {
     var userForm = document.getElementById('userForm');
     userForm.classList.toggle('show');
 }
+function debts() {
+    var userForm = document.getElementById('userForm');
+    userForm.classList.toggle('show');
+}
 const name = document.getElementById('name');
 const surname = document.getElementById('surname');
 const number = document.getElementById('number');
@@ -58,7 +62,8 @@ function showResults(arr) {
         <td>${val.name}</td>
         <td>${val.surname}</td>
         <td>${val.number}</td>
-        <td>${val.debt}</td>
+        <td onclick="debts()">${val.debt}</td>
+        <td><button id="plus">+</button> <button id="minus">-</button></td>
         </tr>`;
         
     }
