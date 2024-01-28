@@ -194,7 +194,7 @@ background-color:#8e8bbb;
     cursor: pointer;
 }
 .user_part {
-    background-color: inherit;
+    background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.312);
@@ -202,9 +202,14 @@ background-color:#8e8bbb;
     transform-origin: top center;
     transform: scaleY(0);
     transition: transform 0.3s ease-in-out;
-    width: 20%;
-    margin-top: -150px
+    width: 24%;
+    height: 100vh;
+    margin-top: -669px;
     
+    
+  }
+  #addUserForm{
+    margin-top: 50%;
   }
   
   .user_part.show {
@@ -245,9 +250,7 @@ background-color:#8e8bbb;
   label {
     color: white;
   }
-  .user_part{
-    margin-left: 30px;
-  }
+
   /*  VALUTA KURSI */
 
   h4{
