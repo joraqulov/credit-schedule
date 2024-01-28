@@ -3,8 +3,8 @@ function showinp() {
     userForm.classList.toggle('show');
 }
 function debts() {
-    var userForm = document.getElementById('userForm');
-    userForm.classList.toggle('show');
+    var debt_bar = document.getElementById('debt_bar');
+    debt_bar.classList.toggle('show2');
 }
 const name = document.getElementById('name');
 const surname = document.getElementById('surname');
