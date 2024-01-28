@@ -29,7 +29,7 @@ width: 30px;
     width: 30px;
     }
 .table_part {
-    margin-top: 120px;
+    margin-top: 80px;
 }
 header input {
   height: 45px;
@@ -194,20 +194,22 @@ background-color:#8e8bbb;
     cursor: pointer;
 }
 .user_part {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.312);
-    text-align: center;
-    transform-origin: top center;
-    transform: scaleY(0);
-    transition: transform 0.3s ease-in-out;
-    width: 24%;
-    height: 100vh;
-    margin-top: -669px;
-    
-    
-  }
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.312);
+  text-align: center;
+  transform-origin: top center;
+  transform: scaleY(0); 
+  transition: transform 0.3s ease-in-out;
+  width: 24%;
+  height: 100vh;
+  margin-top: -2640px;
+}
+
+
   #addUserForm{
     margin-top: 50%;
   }
