@@ -194,7 +194,7 @@ background-color:#8e8bbb;
     cursor: pointer;
 }
 .user_part {
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: white;
   padding: 20px;
@@ -206,9 +206,10 @@ background-color:#8e8bbb;
   transition: transform 0.3s ease-in-out;
   width: 24%;
   height: 100vh;
-  margin-top: -2640px;
 }
 #debt_bar {
+  position: fixed;
+  top: 0;
   width: 24%;
   background-color: whitesmoke;
   padding: 15px;
@@ -220,7 +221,6 @@ background-color:#8e8bbb;
   transition: transform 0.3s ease-in-out;
   width: 24%;
   height: 100vh;
-  margin-top: -697px;
   margin-left: 1154px;
   
 }
@@ -239,7 +239,7 @@ background-color:#8e8bbb;
   transition: transform 0.3s ease-in-out;
   width: 24%;
   height: 32vh;
-  margin-top: -220px;
+ margin-top: -2180px; 
   margin-left: 1154px;
 }
 #calculateBar.show3{
