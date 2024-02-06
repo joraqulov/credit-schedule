@@ -456,7 +456,7 @@ footer div .footerimg{
   margin-left: 250px;
 }
 table .td{
-  background-color: #333333df;
+  background-color: #333131df;
   color: white;
   font-weight: 750px;
   font-size: 20px;
@@ -466,6 +466,6 @@ table .td{
 }
 .td1{
   background-color: #333333df;
-  color: white;
+  color: rgb(244, 242, 242);
   font-weight: 750px;
 }
