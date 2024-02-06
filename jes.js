@@ -22,13 +22,19 @@ const calculateBar = document.getElementById('calculateBar');
 const add = document.getElementById('add');
 const debt_bar = document.getElementById('debt_bar');
 const res2 = document.getElementById('res2');
+ firdavs
+const enter = document.getElementById('enter');
+const bank_users = JSON.parse(localStorage.getItem("bankUsers")) ?? [
+    {   id: new Date().getTime(),
+
 const enter = document.getElementById('enter')
 const bank_users = [
     {
+ master
         name: "Firdavs",
         surname: "Rustamov",
         number: +998915682148,
-        debt: 220000
+        debt: 22000
     },
     {
         name: "Sunnat",
@@ -73,11 +79,53 @@ function showResults(arr) {
         <td>${val.surname}</td>
         <td>${val.number}</td>
         <td onclick="debts()">${val.debt}</td>
+ firdavs
+        <td>
+        <input type="number"  id="money${val.id}" placeholder="Enter action">
+        <button id="plus" onclick="plus(${val.id})">+</button> 
+        <button id="minus" onclick="minus(${val.id})">-</button>
+        <button id="del" onclick="deletee(${val.id})">delete</button>
+        </td>
+
         <td><button id="plus" onclick="calculate()">+</button> <button id="minus">-</button></td>
+master
         </tr>`;
         
     }
 }
+ firdavs
+
+function plus(id) {
+    const money = document.getElementById(`money${id}`); 
+    bank_users.forEach((user) => {
+        if(user.id == id) {
+            user.debt += +money.value;
+            showResults(bank_users)
+        }
+    })
+    
+}
+function minus(id) {
+    const money = document.getElementById(`money${id}`); 
+    bank_users.forEach((user) => {
+        if(user.id == id) {
+            user.debt -= +money.value;
+            showResults(bank_users)
+        }
+    })
+    
+}
+function deletee(id) {
+    for(let i = 0; i < bank_users.length; i++)
+    if(bank_users[i].id == id){
+        bank_users.splice(i, 1);
+        showResults(bank_users)
+        break;
+    }
+}
+
+
+ master
 const debt_users = []
 enter.addEventListener('click', function(e) {
     e.preventDefault();
