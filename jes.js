@@ -23,13 +23,12 @@ const add = document.getElementById('add');
 const debt_bar = document.getElementById('debt_bar');
 const res2 = document.getElementById('res2');
 const enter = document.getElementById('enter');
-const money = document.getElementById('money'); 
 const bank_users = JSON.parse(localStorage.getItem("bankUsers")) ?? [
     {   id: new Date().getTime(),
         name: "Firdavs",
         surname: "Rustamov",
         number: +998915682148,
-        debt: 220000
+        debt: 22000
     },
 
 ]
@@ -70,6 +69,7 @@ function showResults(arr) {
         <td>${val.number}</td>
         <td onclick="debts()">${val.debt}</td>
         <td>
+        <input type="number"  id="money${val.id}" placeholder="Enter action">
         <button id="plus" onclick="plus(${val.id})">+</button> 
         <button id="minus" onclick="minus(${val.id})">-</button>
         <button id="del" onclick="deletee(${val.id})">delete</button>
@@ -80,7 +80,7 @@ function showResults(arr) {
 }
 
 function plus(id) {
-    const money = document.getElementById('money'); 
+    const money = document.getElementById(`money${id}`); 
     bank_users.forEach((user) => {
         if(user.id == id) {
             user.debt += +money.value;
@@ -90,7 +90,7 @@ function plus(id) {
     
 }
 function minus(id) {
-    const money = document.getElementById('money'); 
+    const money = document.getElementById(`money${id}`); 
     bank_users.forEach((user) => {
         if(user.id == id) {
             user.debt -= +money.value;
