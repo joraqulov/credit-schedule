@@ -412,7 +412,8 @@ footer{
   background-color: #f8f8f8;
   display: grid;
   grid-template-rows: auto auto auto;
-  margin: 50px;
+  
+  
 }
 footer div{
   display: flex;
@@ -448,7 +449,7 @@ footer div.gmail{
 }
 footer div .footerimg img{
   width: 50px;
-  margin-left: 30px;
+  margin-left: 20px;
   cursor: pointer;
 }
 footer div .footerimg{
@@ -457,9 +458,7 @@ footer div .footerimg{
 table .td{
   background-color: #333333df;
   color: white;
-  width: 200px;
-  height: 40px;
-  font-weight:750 ;
+  font-weight: 750px;
   font-size: 20px;
 }
 #plus{
@@ -468,5 +467,5 @@ table .td{
 .td1{
   background-color: #333333df;
   color: white;
-  font-weight: 750  ;
+  font-weight: 750px;
 }
