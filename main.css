@@ -454,3 +454,19 @@ footer div .footerimg img{
 footer div .footerimg{
   margin-left: 250px;
 }
+table .td{
+  background-color: #333333df;
+  color: white;
+  width: 200px;
+  height: 40px;
+  font-weight:750 ;
+  font-size: 20px;
+}
+#plus{
+  margin: 4px;
+}
+.td1{
+  background-color: #333333df;
+  color: white;
+  font-weight: 750  ;
+}
