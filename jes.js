@@ -22,14 +22,26 @@ const calculateBar = document.getElementById('calculateBar');
 const add = document.getElementById('add');
 const debt_bar = document.getElementById('debt_bar');
 const res2 = document.getElementById('res2');
+ firdavs
 const enter = document.getElementById('enter');
 const bank_users = JSON.parse(localStorage.getItem("bankUsers")) ?? [
     {   id: new Date().getTime(),
+
+const enter = document.getElementById('enter')
+const bank_users = [
+    {
+ master
         name: "Firdavs",
         surname: "Rustamov",
         number: +998915682148,
         debt: 22000
     },
+    {
+        name: "Sunnat",
+        surname: "Joraqulov",
+        number: +998949432242,
+        debt: 220000   
+    }
 
 ]
 addUserForm.addEventListener('submit', function(e) {
@@ -43,11 +55,11 @@ addUserForm.addEventListener('submit', function(e) {
     }
     else{
      bank_users.push(
-        {   id: new Date().getTime(),
+        {
             name: name.value,
             surname: surname.value,
             number: number.value,
-            debt: +inp_debt.value
+            debt: inp_debt.value
         });
         showResults(bank_users);
         name.value = "";
@@ -57,7 +69,6 @@ addUserForm.addEventListener('submit', function(e) {
     }
 });
 function showResults(arr) {
-    localStorage.setItem("bankUsers", JSON.stringify(bank_users))
     res.innerHTML = "";
     for(let i = 0; i < arr.length; i++) {
         const val = arr[i];
@@ -68,16 +79,21 @@ function showResults(arr) {
         <td>${val.surname}</td>
         <td>${val.number}</td>
         <td onclick="debts()">${val.debt}</td>
+ firdavs
         <td>
         <input type="number"  id="money${val.id}" placeholder="Enter action">
         <button id="plus" onclick="plus(${val.id})">+</button> 
         <button id="minus" onclick="minus(${val.id})">-</button>
         <button id="del" onclick="deletee(${val.id})">delete</button>
         </td>
+
+        <td><button id="plus" onclick="calculate()">+</button> <button id="minus">-</button></td>
+master
         </tr>`;
         
     }
 }
+ firdavs
 
 function plus(id) {
     const money = document.getElementById(`money${id}`); 
@@ -109,6 +125,7 @@ function deletee(id) {
 }
 
 
+ master
 const debt_users = []
 enter.addEventListener('click', function(e) {
     e.preventDefault();
