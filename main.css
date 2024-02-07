@@ -52,7 +52,7 @@ header {
 }
 .nbu2 img{
   cursor: pointer;
-  width: 310px;
+  width: 300px;
   height: 110px;
 }
 .hederend{
@@ -586,7 +586,7 @@ table .td{
 
 
 
- #money1707311742422 {
+input {
   width: 230px;
   max-width: 220px;
   height: 35px;
@@ -597,15 +597,15 @@ table .td{
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   box-shadow: 0px 0px 20px -18px;
 }
-#money1707311742422:hover {
+input:hover {
   border: 2px solid lightgrey;
   box-shadow: 0px 0px 20px -17px;
 }
 
-#money1707311742422:active {
+input:active {
   transform: scale(0.95);
 }
 
-#money1707311742422:focus {
+input:focus {
   border: 2px solid grey;
 }
