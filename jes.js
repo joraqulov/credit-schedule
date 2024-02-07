@@ -2,14 +2,23 @@ function showinp() {
     var userForm = document.getElementById('userForm');
     userForm.classList.toggle('show');
 }
-function debts() {
+function debts(id) {
     var debt_bar = document.getElementById('debt_bar');
     debt_bar.classList.toggle('show2');
+    var userHistory = bank_users.filter((user) => user.id == id)[0].history;
+    res2.innerHTML = userHistory.map((iteam) => {
+
+
+            var {time, status, howMuch} = iteam;
+            return `
+            <span>${status};</span>
+            <span>${howMuch}</span>  
+            <span>${time}</span>
+            `
+        
+    }).join('');
 }
-function calculate() {
-    var calculateBar = document.getElementById('calculateBar');
-    calculateBar.classList.toggle('show3')
-}
+
 
 const name = document.getElementById('name');
 const surname = document.getElementById('surname');
@@ -32,6 +41,12 @@ const bank_users = JSON.parse(localStorage.getItem("bankUsers")) ?? [
     },
 
 ]
+function dateHandler() {
+    var year = new Date().getFullYear();
+    var month = new Date().getMonth() +1;
+    var day = new Date().getDate();
+    return `${day}.${month}.${year}`
+  }
 addUserForm.addEventListener('submit', function(e) {
     e.preventDefault();
     if(name.value.trim() == "" ||
@@ -47,7 +62,13 @@ addUserForm.addEventListener('submit', function(e) {
             name: name.value,
             surname: surname.value,
             number: number.value,
-            debt: +inp_debt.value
+            debt: +inp_debt.value,
+            history: [{
+                time: dateHandler(),
+                status: 'add debt',
+                howMuch: 2000
+            }
+            ]
         });
         showResults(bank_users);
         name.value = "";
@@ -67,7 +88,7 @@ function showResults(arr) {
         <td>${val.name}</td>
         <td>${val.surname}</td>
         <td>${val.number}</td>
-        <td onclick="debts()">${val.debt}</td>
+        <td onclick="debts(${val.id})">${val.debt}</td>
         <td>
         <input type="number"  id="money${val.id}" placeholder="Enter action">
         <button id="plus" onclick="plus(${val.id})">+</button> 
@@ -84,6 +105,11 @@ function plus(id) {
     bank_users.forEach((user) => {
         if(user.id == id) {
             user.debt += +money.value;
+            user.history.push({
+                time: dateHandler(),
+                status: 'add debt',
+                howMuch: money.value
+            })
             showResults(bank_users)
         }
     })
@@ -94,6 +120,11 @@ function minus(id) {
     bank_users.forEach((user) => {
         if(user.id == id) {
             user.debt -= +money.value;
+            user.history.push({
+                time: dateHandler(),
+                status: 'remove debt',
+                howMuch: money.value
+            })
             showResults(bank_users)
         }
     })
@@ -107,35 +138,4 @@ function deletee(id) {
         break;
     }
 }
-
-
-const debt_users = []
-enter.addEventListener('click', function(e) {
-    e.preventDefault();
-    if(add.value.trim() == "") {
-        alert("Write how much money you pay")
-    }
-    else{
-     debt_users.push(
-        {
-            debt: 'debt',
-            money: add.value,
-            day: new Date().toLocaleString("uz")
-        });
-        showResults2(debt_users);
-        add.value = "";
-
-    }
-});
-function showResults2(arr) {
-    res2.innerHTML = "";
-    for(let i = 0; i < arr.length; i++) {
-        const val2 = arr[i];
-        res2.innerHTML += `
-        <span>${val2.debt};</span>
-        <span><u>${val2.money}sum</u></span>  
-        <span>${val2.day}</span>`;
-    }
-}
 showResults(bank_users)
-showResults2(debt_users)
