@@ -44,11 +44,16 @@ header {
   margin-top: 15px;
     display: grid;
     align-items: center;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto auto auto ;
     justify-content: space-between;
     padding: 10px;   
     gap: 13px;
     margin-bottom: 25px;
+}
+.nbu img{
+  cursor: pointer;
+  width: 300px;
+  height: 100px;
 }
 .hederend{
   display: flex;
